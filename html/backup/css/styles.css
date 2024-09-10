@@ -1,0 +1,42 @@
+.arquivos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20%;
+    text-align: center;
+}
+
+input{
+    margin: 50px;
+}
+
+#backupBtn{
+    background-color: #84b6f4;
+    color: white;
+}
+
+@media (max-width:1200px){
+    body{
+        font-size: 3vw;
+        display: flex;
+        align-items: center;
+     
+    }
+    input{
+        font-size: 4vw;
+    }
+    button{
+        height: 12vw;
+        width: 40vw;
+        font-size: 4vw;
+        border-radius: 30px;
+        border-style:none
+    }
+
+    button:active{
+        border-radius: 50px;
+        background-color: rgb(223, 223, 223);
+    }
+
+}

@@ -1,0 +1,199 @@
+body{
+    margin:0px;
+    padding: 0px;
+    font-family: 'Roboto';
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#my-header{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background-color: #fff;
+    color: #ff8c00;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 8px 15px 20px rgba(0, 0, 0, 0.171);
+}
+
+#divElements{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#b-header{
+    margin-left: 40px;
+    margin-right: 40px;
+    border: none;
+    background-color: transparent;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80px;
+    width: 80px;
+    border-radius: 80px;
+}
+
+#b-header:active{
+    background-color: rgb(219, 219, 219);
+}
+
+#search{
+    width: 70%;
+    border: none;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 8px 15px 20px rgba(0, 0, 0, 0.171);
+    height: 40px;
+    margin-top:100px;
+    margin-bottom: 100px;
+    background-image: url('../../../icons/search.png');
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: center;
+    background-position-x: 95%;
+}
+
+#search:focus{
+    background-image: none;
+}
+
+#load {
+    display: none;
+    width: 100%;
+    align-items: center;
+    justify-content:center ;
+    margin-top: 80px;
+}
+
+.spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 8px solid rgba(0, 0, 0, 0.1);
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#component{
+    width: 85%;
+    margin-bottom: 60px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 25px;
+    box-shadow: 8px 15px 20px rgba(0, 0, 0, 0.171);
+}
+
+#component button{
+    height: 100px;
+    border-radius: 25px;
+    border: none;
+    background-color: transparent;
+}
+
+
+#component-intern{
+    display: flex;
+    width: 40%;
+}
+
+#button-name{
+    width: 65%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#button-name:active{
+    background-color: rgb(219, 219, 219);
+}
+
+#component-intern button{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: center;
+}
+
+#component-intern button:active{
+    background-color: rgb(219, 219, 219);
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:1200px){
+
+    body{
+        font-size: 4vw;
+    }
+
+    #my-header{
+        display: flex;
+        height: 14vw;
+        font-size: 5vw;
+        font-weight: bold;
+        box-shadow: 8px 15px 20px rgba(0, 0, 0, 0.171);
+    }
+
+    #b-header{
+        height: 10vw;
+        width: 15%;
+        background-size: 8vw;
+    }
+
+    #search{
+        width: 70%;
+        margin-top: 80px;
+        font-size: 3vw;
+        height: 10vw;
+        background-size: 8vw;
+    }
+
+    #component button{
+        height: 14vw;
+        font-size: 3vw;
+        border: none;
+        background-color: transparent;
+        
+    }
+
+    #button-name{
+        width: 65%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    #component-intern button{
+        background-size: 5vw;
+    }
+
+    #divElements{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}

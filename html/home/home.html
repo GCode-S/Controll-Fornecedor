@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="msapplication-navbutton-color" content="#14C005" >
+    <meta name="apple-mobile-web-app-status-bar-style" content="#14C005" >
+    <meta  name="theme-color"  content="#14C005" >
+
+    <title>Controll</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <script type="module" src="./js/home.js"></script>
+    
+</head>
+<body>
+    <div id="my-header">
+        <button id="b-header" onclick="movePag('backup', 0, 0)"  style="background-image: url('../../../icons/settings-orange.png');"></button>
+        HOME
+        <button id="b-header" onclick="createFornecer();" style="background-image: url('../../../icons/plus-orange.png');"></button>
+    </div>
+
+    <input id="search"  onkeyup="filterResult()" placeholder="pesquise aqui um fornecedor." type="text">
+    
+    <div id="load">
+        <div id="spinner" class="spinner"></div>
+    </div>
+    <div id="divElements">
+    </div>
+
+</body>
+</html>
