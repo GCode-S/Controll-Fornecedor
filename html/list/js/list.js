@@ -485,19 +485,17 @@ window.gereatePDF = function(){
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
-
-    const head = [['Nome', 'Valor Un.', 'Quant.', 'Valor Total']];
+    doc.text(`FORNECEDOR: ${captName}`, 20, 10);
+    const head = [['Nome', 'Quant.', 'Valor Un.', 'Valor Total']];
 
     const results = [];
 
     for(var i = 0; i< data.length; i++){
-        const dado = [data[i].nome, data[i].valor, data[i].quantidade, data[i].valor * data[i].quantidade];
+        const dado = [data[i].nome, data[i].quantidade, data[i].valor, data[i].valor * data[i].quantidade];
         results.push(dado);
     }
 
-    results.push(['Valor Total do Pedido:', ` R$ ${calc.toFixed(2)}`])
-
-    console.log(results);
+    results.push(['Valor Total do Pedido:','','', ` R$ ${calc.toFixed(2)}`])
 
     doc.autoTable({
         head: head,
@@ -509,6 +507,7 @@ window.gereatePDF = function(){
         margin:{ top: 20},
         didParseCell: function(results){
             if(results.row.index === results.table.body.length -1){
+                results.cell.styles.fontSize = 15;
                 results.cell.styles.fontStyle = 'bold';
             }
         }
