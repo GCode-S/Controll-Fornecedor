@@ -500,7 +500,7 @@ window.gereatePDF = function(){
     doc.autoTable({
         head: head,
         body: results,
-        startY: 10,
+        startY: 15,
         theme: 'grid',
         headStyles: {fillColor: [100,100,255]},
         alternateRowStyles: { fillColor:[240, 240, 240]},
