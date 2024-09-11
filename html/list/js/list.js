@@ -63,7 +63,7 @@ function handleScreens(Boolean){
     }else{
         viewADD.style.display = 'none';
         viewPDF.style.display = 'flex';
-
+      ReloadCalc();
         navigation.style.width = '100%';
 
         setTimeout(() =>{
@@ -222,17 +222,16 @@ window.viewProduct = async function (){
 
 await viewProduct();
 
-//var calc = 0;
+var calc = 0;
 
-const calc = async () =>{
+const ReloadCalc = () =>{
   
-  var soma;
   
   for (var i = 0; i < data.length; i++) {
-    soma += data[i].quantidade * data[i].valor;
+    calc += data[i].quantidade * data[i].valor;
   }
   
-  return soma;
+  
 }
 
 window.viewRequests = async function (){
@@ -294,6 +293,7 @@ window.viewRequests = async function (){
    
            });
            results = data;
+           
             document.getElementById("itens").innerHTML = ViewList.join("");
             document.getElementById("buy").innerHTML  = `Buy: R$ ${calc.toFixed(2)}`;
 
