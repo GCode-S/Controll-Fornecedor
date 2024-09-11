@@ -1,6 +1,8 @@
 import { addProduct, viewProductsF, deleteProduct, editProduct } from "../../../connection/db.js";
 
 
+
+
 //pegando infos passadas pela url
 var captName  = new URLSearchParams(window.location.search).get('name');
 var Id = new URLSearchParams(window.location.search).get('id');
@@ -220,7 +222,19 @@ window.viewProduct = async function (){
 
 await viewProduct();
 
-var calc = 0;
+//var calc = 0;
+
+const calc = async () =>{
+  
+  var soma;
+  
+  for (var i = 0; i < data.length; i++) {
+    soma += data[i].quantidade * data[i].valor;
+  }
+  
+  return soma;
+}
+
 window.viewRequests = async function (){
 
     window.document.getElementById("search").value = "";
@@ -241,8 +255,6 @@ window.viewRequests = async function (){
     }
    
   const ViewList  = data.map(i =>{
-
-                calc += i.quantidade * i.valor;
 
 
                 const card = `
@@ -362,6 +374,7 @@ window.clearProducts = async function(){
             for(var i = 0; i < data.length; i++){
 
                 await editProduct(data[i].id, 'exit');
+
     
             }
     
@@ -570,6 +583,7 @@ window.copy = function(){
 
     copyAT(text);
     
+
 
 
 }
