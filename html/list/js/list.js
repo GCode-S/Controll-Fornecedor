@@ -63,7 +63,7 @@ function handleScreens(Boolean){
     }else{
         viewADD.style.display = 'none';
         viewPDF.style.display = 'flex';
-        ReloadCalc();
+        
         navigation.style.width = '100%';
 
         setTimeout(() =>{
@@ -293,6 +293,7 @@ window.viewRequests = async function (){
    
            });
            results = data;
+           ReloadCalc();
            
             document.getElementById("itens").innerHTML = ViewList.join("");
             document.getElementById("buy").innerHTML  = `Buy: R$ ${calc.toFixed(2)}`;
@@ -312,7 +313,7 @@ window.addProducts = async function (){
         console.log('add')
         await addProduct(Id);
         await viewProduct();
-        ReloadCalc();
+        
 
     }catch(e){
         alert("Erro ao cadastrar novo produto!");
@@ -357,7 +358,7 @@ window.updateProducts = async function(id, option){
         }
 
         
-     ReloadCalc();
+     
 
     }catch (e){
         console.log(e);
