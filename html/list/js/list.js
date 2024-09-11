@@ -224,15 +224,13 @@ await viewProduct();
 
 var calc = 0;
 
-const ReloadCalc = () =>{
-  
+function ReloadCalc() {
   calc = 0;
   for (var i = 0; i < data.length; i++) {
     calc += data[i].quantidade * data[i].valor;
   }
-  
-  
-}
+} 
+
 
 window.viewRequests = async function (){
 
