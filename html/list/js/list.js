@@ -517,3 +517,59 @@ window.gereatePDF = function(){
      
     doc.save('pedido.pdf');
 }
+
+function copyAT(text){
+    if(navigator.clipboard && window.isSecureContext){
+        navigator.clipboard.writeText(text)
+        .then(() =>{
+            alert("Texto copiado");
+        })
+        .catch(e =>{
+            console.log('erro ao copiar')
+        })
+    }else {
+        // Método alternativo para navegadores antigos
+        const textArea = document.createElement("textarea");
+        textArea.value = text;
+        // Garante que o campo textarea seja invisível
+        textArea.style.position = "fixed";
+        textArea.style.left = "-9999px";
+        document.body.appendChild(textArea);
+        textArea.select();
+        try {
+            document.execCommand('copy');
+            alert("Texto copiado para a área de transferência!");
+        } catch (err) {
+            console.error("Erro ao copiar para a área de transferência: ", err);
+        }
+        document.body.removeChild(textArea);
+    }
+
+        
+}
+
+
+window.copy = function(){
+
+    console.log("copy");
+    let un = ''
+    let text = 'Pedidos para a Semana: \n \n';
+
+    for(var i =0; i < data.length; i++){
+        if(data[i].valor == 1){
+            un = 'Fardo/Caixa';
+        }else{
+            un= 'Unidade';
+        }
+        text += `*${data[i].nome}:*  ${data[i].quantidade}  -- ${un} \n`;
+
+    }
+
+    text += '\n \n';
+    text += 'Obrigado, tenha uma ótima semana!!';
+
+    copyAT(text);
+    
+
+
+}
