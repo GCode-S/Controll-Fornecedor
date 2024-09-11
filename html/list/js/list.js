@@ -37,7 +37,7 @@ function handleSpinner(Boolean){
 
 function handleScreens(Boolean){
     if(Boolean == true){
-
+        
         if(data.length != 0){
             document.getElementById("navigation").style.display = 'flex';
          }
@@ -63,7 +63,7 @@ function handleScreens(Boolean){
     }else{
         viewADD.style.display = 'none';
         viewPDF.style.display = 'flex';
-      ReloadCalc();
+        ReloadCalc();
         navigation.style.width = '100%';
 
         setTimeout(() =>{
@@ -215,7 +215,7 @@ window.viewProduct = async function (){
             handleSpinner(false);
            console.log(data);
         
-        
+        ReloadCalc();
        
 
 }
@@ -226,7 +226,7 @@ var calc = 0;
 
 const ReloadCalc = () =>{
   
-  
+  calc = 0;
   for (var i = 0; i < data.length; i++) {
     calc += data[i].quantidade * data[i].valor;
   }
@@ -312,6 +312,7 @@ window.addProducts = async function (){
         console.log('add')
         await addProduct(Id);
         await viewProduct();
+        ReloadCalc();
 
     }catch(e){
         alert("Erro ao cadastrar novo produto!");
@@ -335,7 +336,7 @@ window.deleteProducts = async function(id){
             await viewProduct();
         }
         
-        
+        ReloadCalc();
 
     }catch (e){
         alert("Erro ao deletar produto!");
@@ -356,7 +357,7 @@ window.updateProducts = async function(id, option){
         }
 
         
-     
+     ReloadCalc();
 
     }catch (e){
         console.log(e);
@@ -381,7 +382,7 @@ window.clearProducts = async function(){
             await viewRequests();
         }
 
-       
+       ReloadCalc();
 
     }catch(e){
         alert("Erro ao limpar area dos pedidos.")
