@@ -493,18 +493,24 @@ window.filterResult = function(){
 //função criar pdf
 
 
+const { jsPDF } = window.jspdf;
 
-window.gereatePDF = function(){
-    const { jsPDF } = window.jspdf;
+
+
+window.gereatePDF = async function(){
+    // const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
-
-    doc.text(`FORNECEDOR: ${captName}`, 20, 10);
-    const head = [['Nome', 'Quant.', 'Valor Un.', 'Valor Total']];
+    var date = new Date()
+    doc.text(`Data: ${date.toLocaleDateString()}`,20,10);
+    doc.text(`FORNECEDOR: ${captName}`, 20, 20);
+    const conferente = prompt("digite seu nome: ");
+    doc.text(`Nome do Conferente: ${conferente}`, 20, 35);
+    const head = [['Nome', 'Quant.', 'Valor Un. R$', 'Valor Total']];
 
     const results = [];
 
     for(var i = 0; i< data.length; i++){
-        const dado = [data[i].nome, data[i].quantidade, data[i].valor, data[i].valor * data[i].quantidade];
+        const dado = [data[i].nome, data[i].quantidade, data[i].valor.toFixed(2), data[i].valor * data[i].quantidade];
         results.push(dado);
     }
 
@@ -513,7 +519,7 @@ window.gereatePDF = function(){
     doc.autoTable({
         head: head,
         body: results,
-        startY: 15,
+        startY: 40,
         theme: 'grid',
         headStyles: {fillColor: [100,100,255]},
         alternateRowStyles: { fillColor:[240, 240, 240]},
@@ -527,7 +533,6 @@ window.gereatePDF = function(){
     });
 
 
-     
     doc.save('pedido.pdf');
 }
 
