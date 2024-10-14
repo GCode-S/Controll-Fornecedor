@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Controll</title>
+
+  
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="./styles/stylesList.css">
+  
+    <script type="module" src="./js/list.js"></script>
+    
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.20/jspdf.plugin.autotable.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    
+    <div class="headers">
+            <div id="my-header">
+                    
+            </div>
+            
+            <div id="navigation">
+                
+                <button id="products" onclick="viewProduct()">
+                        Produtos
+                </button>
+                <button id="requests"  onclick="viewRequests()">
+                        Meus pedidos
+                        <div id="marker"></div>
+                </button>
+                <div id="selectaction"></div>
+
+            </div>
+            <div id="component"></div>
+                <input id="search" onkeyup="filterResult()" placeholder="pesquise aqui um produto." type="text">
+            </div>
+    </div>
+
+   
+
+    <div id="load">
+        <div id="spinner" class="spinner"></div>
+    </div>
+
+    <div id="itens">
+       
+        
+    </div>
+
+    <footer id="add-product">
+        <button onclick="addProducts()">+</button>
+    </footer>
+   
+
+
+    <footer id="create-pdf">
+        <button onclick="clearProducts()" id="clear"></button>
+         <button style=" background-color: #51AFF7;
+        background-image: url('../../../icons/charm_copy.png');
+        background-repeat: no-repeat;" id="copy" onclick="copy()"></button>
+        <div id="buy" ></div>
+        <button onclick="gereatePDF()" style="background-image: url('../../../icons/pdf.png');"></button>
+    </footer>
+    <div style="height: 40vh;"></div>
+    
+</body>
+</html>
