@@ -510,7 +510,7 @@ window.gereatePDF = async function(){
     const results = [];
 
     for(var i = 0; i< data.length; i++){
-        const dado = [data[i].nome, data[i].quantidade, data[i].valor.toFixed(2), data[i].valor * data[i].quantidade];
+        const dado = [data[i].nome, data[i].quantidade, data[i].valor.toFixed(2), (data[i].valor * data[i].quantidade).toFixed(2)];
         results.push(dado);
     }
 
