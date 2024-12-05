@@ -533,7 +533,7 @@ window.gereatePDF = async function(){
     });
 
 
-    doc.save('pedido.pdf');
+    doc.save(`pedido ${captName}.pdf`);
 }
 
 function copyAT(text){
