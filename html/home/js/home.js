@@ -27,7 +27,8 @@ async function viewProps(){
         
         views = await viewFornecedor ();
 
-        console.log(views);
+        
+        views.sort((a, b) => a.nome.localeCompare(b.nome));
         
         const elementsView = views.map(view => {
             return `
