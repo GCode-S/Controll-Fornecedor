@@ -155,6 +155,8 @@ window.viewProduct = async function (){
             return
         }
 
+        data.sort((a, b) => a.nome.localeCompare(b.nome));
+
 
             const ViewList  = data.map(i =>{
 
