@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="msapplication-navbutton-color" content="#14C005" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
     <meta name="apple-mobile-web-app-status-bar-style" content="#14C005" >
     <meta  name="theme-color"  content="#14C005" >
 
@@ -17,10 +19,10 @@
 <body>
     <div id="my-header">
         <button id="b-header" onclick="movePag('backup', 0, 0)"  style="background-image: url('../../../icons/settings-orange.png');"></button>
-        HOME
+        INICIO
         <button id="b-header" onclick="createFornecer();" style="background-image: url('../../../icons/plus-orange.png');"></button>
     </div>
-
+    
     <input id="search"  onkeyup="filterResult()" placeholder="pesquise aqui um fornecedor." type="text">
     
     <div id="load">
@@ -28,6 +30,8 @@
     </div>
     <div id="divElements">
     </div>
-
+    <div class="developer">
+        <p>Desenvolvido por <a href="https://github.com/GCode-S"> <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="30" alt="logo github">GCode-S</a></p>
+    </div>
 </body>
 </html>

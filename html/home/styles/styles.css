@@ -12,6 +12,8 @@ body{
     display: flex;
     height: 80px;
     width: 100%;
+    font-weight: bold;
+    font-size: 2rem;
     background-color: #fff;
     color: #ff8c00;
     flex-direction: row;
@@ -19,7 +21,45 @@ body{
     justify-content: space-between;
     box-shadow: 8px 15px 20px rgba(0, 0, 0, 0.171);
 }
+.developer {
+  display: flex;
+  font-size: .75rem ;
+  width: 80%;
+  justify-content: center; 
+  align-items: center;  
+  padding: 10px;
+}
 
+.developer p {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+
+.developer a {
+    margin-left: 6px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    width: 30%;
+    height: 35px;
+    justify-content: center;
+    border-radius: 8px;
+    display: flex;
+    align-items: center; 
+    background-color:white;
+}
+
+.developer a:active{
+    background-color: #ff8c00;
+}
+
+.developer img{
+    margin-right: 10px;
+}
 #divElements{
     display: flex;
     flex-direction: column;
@@ -46,17 +86,15 @@ body{
 }
 
 #search{
-    width: 70%;
+    width: 96%;
     border: none;
-    border-radius: 25px;
     text-align: center;
     box-shadow: 8px 15px 20px rgba(0, 0, 0, 0.171);
-    height: 40px;
-    margin-top:100px;
-    margin-bottom: 100px;
+    height: 3rem;
+    margin-bottom: 38px;
     background-image: url('../../../icons/search.png');
     background-repeat: no-repeat;
-    background-size: 40px;
+    background-size: 2rem;
     background-position: center;
     background-position-x: 95%;
 }
@@ -92,7 +130,7 @@ body{
 
 #component{
     width: 85%;
-    margin-bottom: 60px;
+    margin-bottom: 18px;
     background-color: #fff;
     display: flex;
     flex-direction: row;
@@ -147,14 +185,12 @@ body{
 @media (max-width:1200px){
 
     body{
-        font-size: 4vw;
+        font-size: 1rem;
     }
 
     #my-header{
         display: flex;
         height: 14vw;
-        font-size: 5vw;
-        font-weight: bold;
         box-shadow: 8px 15px 20px rgba(0, 0, 0, 0.171);
     }
 
@@ -165,18 +201,14 @@ body{
     }
 
     #search{
-        width: 70%;
-        margin-top: 80px;
-        font-size: 3vw;
-        height: 10vw;
-        background-size: 8vw;
+        font-size: 1rem;
     }
 
     #component button{
         height: 14vw;
-        font-size: 3vw;
+        font-size: .75rem;
         border: none;
-        background-color: transparent;
+        /* background-color: transparent; */
         
     }
 
