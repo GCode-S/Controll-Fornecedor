@@ -194,7 +194,17 @@ window.viewProduct = async function (){
                         </div>
    
                 </div>
-                
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6913696668328445"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"
+     data-ad-client="ca-pub-6913696668328445"
+     data-ad-slot="8693383431"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
                `;
 
               
