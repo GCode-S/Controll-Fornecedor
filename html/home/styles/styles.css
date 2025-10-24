@@ -87,6 +87,7 @@ body{
 
 #search{
     width: 96%;
+    
     border: none;
     text-align: center;
     box-shadow: 8px 15px 20px rgba(0, 0, 0, 0.171);
@@ -101,6 +102,7 @@ body{
 
 #search:focus{
     background-image: none;
+    outline: none;
 }
 
 #load {

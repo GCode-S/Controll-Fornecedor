@@ -114,6 +114,7 @@ body{
 
 #search:focus{
     background-image: none;
+    outline: none;
 }
 
 #load {
