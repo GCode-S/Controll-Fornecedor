@@ -447,7 +447,7 @@
                             }
                            
                         }else if( option == 'exit'){
-                            result.valor = 0;
+                            // result.valor = 0;
                             result.quantidade = 0;
                             reqPut = str.put(result);
                         }
